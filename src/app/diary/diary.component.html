@@ -4,7 +4,12 @@
 
 <div *ngFor='let diary of diaries; let i=index'>
 
-    <p>{{diary.name}} ... {{diary.content}}</p>
+    <p *ngIf='diary.votes==highest; else notHigh' appHighlight>
+        {{diary.name}} ... {{diary.content}}</p>
+
+    <ng-template #notHigh>
+        {{diary.name}} ... {{diary.content}}
+    </ng-template>
     <ul>
         <li>vote:{{diary.votes}}</li>
     </ul>

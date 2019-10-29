@@ -8,6 +8,7 @@ import { Diary } from './diary';
 })
 export class DiaryComponent implements OnInit {
 
+  highest:number = 3;
   diaries:Diary[]=[
     {
       name: 'boyd',content:'catchup',votes:0
@@ -31,6 +32,10 @@ export class DiaryComponent implements OnInit {
 
   voting(index:number){
     this.diaries[index].votes +=1;
+  }
+
+  highestVoted(){
+    
   }
 
   devoting(index:number){

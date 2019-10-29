@@ -6,12 +6,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DiaryFormComponent } from './diary-form/diary-form.component';
 import { DiaryComponent } from './diary/diary.component';
+import { HighlightDirective } from './highlight.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     DiaryFormComponent,
-    DiaryComponent
+    DiaryComponent,
+    HighlightDirective
   ],
   imports: [
     BrowserModule,
