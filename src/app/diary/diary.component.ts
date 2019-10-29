@@ -30,11 +30,14 @@ export class DiaryComponent implements OnInit {
   }
 
   voting(index:number){
-    this.diaries[index].votes += 1;
+    this.diaries[index].votes +=1;
   }
 
   devoting(index:number){
     this.diaries[index].votes -= 1;
+    if(this.diaries[index].votes<0){
+      this.diaries[index].votes=0;
+    }
   }
 
 
