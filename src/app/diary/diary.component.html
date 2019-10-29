@@ -1,0 +1,11 @@
+
+<app-diary-form (newDiary)=saveDiary($event)></app-diary-form>
+
+
+<div *ngFor='let diary of diaries'>
+
+    <p>{{diary.name}} ... {{diary.content}}</p>
+
+  </div>
+
+  
