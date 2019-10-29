@@ -10,7 +10,7 @@ export class DiaryComponent implements OnInit {
 
   diaries:Diary[]=[
     {
-      name: 'boyd',content:'catchup'
+      name: 'boyd',content:'catchup',votes:0
     }
   ]
   
@@ -23,6 +23,18 @@ export class DiaryComponent implements OnInit {
 
   saveDiary(diary:Diary){
     this.diaries.push(diary);
+  }
+
+  del(index){
+    this.diaries.splice(index);
+  }
+
+  voting(index:number){
+    this.diaries[index].votes += 1;
+  }
+
+  devoting(index:number){
+    this.diaries[index].votes -= 1;
   }
 
 

@@ -19,11 +19,13 @@ export class DiaryFormComponent implements OnInit {
   }
 
 
-  formDiary = new Diary('1','1');
+  formDiary = new Diary('','',0);
 
 
   onSubmit(){
     this.newDiary.emit(this.formDiary);
+    this.formDiary = new Diary('','',0);
+
   }
 
 

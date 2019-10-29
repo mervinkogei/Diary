@@ -2,9 +2,17 @@
 <app-diary-form (newDiary)=saveDiary($event)></app-diary-form>
 
 
-<div *ngFor='let diary of diaries'>
+<div *ngFor='let diary of diaries; let i=index'>
 
     <p>{{diary.name}} ... {{diary.content}}</p>
+    <ul>
+        <li>vote:{{diary.votes}}</li>
+    </ul>
+    
+    <button (click)="voting(i)">like</button>
+    <button (click)="devoting(i)">dislike</button>
+
+    <button (click)="del(i)">delete</button>
 
   </div>
 
